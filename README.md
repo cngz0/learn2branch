@@ -24,9 +24,6 @@ do
     python 03_train_gcnn.py setcover -m baseline -s $i
     python 03_train_gcnn.py setcover -m mean_convolution -s $i
     python 03_train_gcnn.py setcover -m no_prenorm -s $i
-    python 03_train_competitor.py setcover -m extratrees -s $i
-    python 03_train_competitor.py setcover -m svmrank -s $i
-    python 03_train_competitor.py setcover -m lambdamart -s $i
 done
 # Test
 python 04_test.py setcover
@@ -44,9 +41,6 @@ python 02_generate_dataset.py cauctions -j 4  # number of available CPUs
 for i in {0..4}
 do
     python 03_train_gcnn.py cauctions -m baseline -s $i
-    python 03_train_competitor.py cauctions -m extratrees -s $i
-    python 03_train_competitor.py cauctions -m svmrank -s $i
-    python 03_train_competitor.py cauctions -m lambdamart -s $i
 done
 # Test
 python 04_test.py cauctions
@@ -64,9 +58,6 @@ python 02_generate_dataset.py facilities -j 4  # number of available CPUs
 for i in {0..4}
 do
     python 03_train_gcnn.py facilities -m baseline -s $i
-    python 03_train_competitor.py facilities -m extratrees -s $i
-    python 03_train_competitor.py facilities -m svmrank -s $i
-    python 03_train_competitor.py facilities -m lambdamart -s $i
 done
 # Test
 python 04_test.py facilities
@@ -84,9 +75,6 @@ python 02_generate_dataset.py indset -j 4  # number of available CPUs
 for i in {0..4}
 do
     python 03_train_gcnn.py indset -m baseline -s $i
-    python 03_train_competitor.py indset -m extratrees -s $i
-    python 03_train_competitor.py indset -m svmrank -s $i
-    python 03_train_competitor.py indset -m lambdamart -s $i
 done
 # Test
 python 04_test.py indset
