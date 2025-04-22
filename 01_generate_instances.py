@@ -60,38 +60,6 @@ class Graph:
         return cliques
 
     @staticmethod
-    def erdos_renyi(number_of_nodes, edge_probability, random):
-        """
-        Generate an Erdös-Rényi random graph with a given edge probability.
-
-        Parameters
-        ----------
-        number_of_nodes : int
-            The number of nodes in the graph.
-        edge_probability : float in [0,1]
-            The probability of generating each edge.
-        random : numpy.random.RandomState
-            A random number generator.
-
-        Returns
-        -------
-        Graph
-            The generated graph.
-        """
-        edges = set()
-        degrees = np.zeros(number_of_nodes, dtype=int)
-        neighbors = {node: set() for node in range(number_of_nodes)}
-        for edge in combinations(np.arange(number_of_nodes), 2):
-            if random.uniform() < edge_probability:
-                edges.add(edge)
-                degrees[edge[0]] += 1
-                degrees[edge[1]] += 1
-                neighbors[edge[0]].add(edge[1])
-                neighbors[edge[1]].add(edge[0])
-        graph = Graph(number_of_nodes, edges, degrees, neighbors)
-        return graph
-
-    @staticmethod
     def barabasi_albert(number_of_nodes, affinity, random):
         """
         Generate a Barabási-Albert random graph with a given edge probability.
