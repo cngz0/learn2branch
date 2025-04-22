@@ -17,7 +17,7 @@ See installation instructions [here](INSTALL.md).
 # Generate MILP instances
 python 01_generate_instances.py setcover
 # Generate supervised learning datasets
-python 02_generate_samples.py setcover -j 4  # number of available CPUs
+python 02_generate_dataset.py setcover -j 4  # number of available CPUs
 # Training
 for i in {0..4}
 do
@@ -39,7 +39,7 @@ python 05_evaluate.py setcover
 # Generate MILP instances
 python 01_generate_instances.py cauctions
 # Generate supervised learning datasets
-python 02_generate_samples.py cauctions -j 4  # number of available CPUs
+python 02_generate_dataset.py cauctions -j 4  # number of available CPUs
 # Training
 for i in {0..4}
 do
@@ -59,7 +59,7 @@ python 05_evaluate.py cauctions
 # Generate MILP instances
 python 01_generate_instances.py facilities
 # Generate supervised learning datasets
-python 02_generate_samples.py facilities -j 4  # number of available CPUs
+python 02_generate_dataset.py facilities -j 4  # number of available CPUs
 # Training
 for i in {0..4}
 do
@@ -79,7 +79,7 @@ python 05_evaluate.py facilities
 # Generate MILP instances
 python 01_generate_instances.py indset
 # Generate supervised learning datasets
-python 02_generate_samples.py indset -j 4  # number of available CPUs
+python 02_generate_dataset.py indset -j 4  # number of available CPUs
 # Training
 for i in {0..4}
 do
